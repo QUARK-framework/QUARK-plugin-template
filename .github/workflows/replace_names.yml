@@ -18,19 +18,19 @@ jobs:
       - name: Set env
         run: echo "PLUGIN_NAME_FORMATTED=$(echo '${{ env.PLUGIN_NAME }}' | tr '-' ' ' | tr -s ' ' | tr ' ' '_' | tr '[:upper:]' '[:lower:]')" >> $GITHUB_ENV
 
-      - name: Find and replace plugin name
-        uses: jacobtomlinson/gha-find-replace@v3
-        with:
-          find: "PLUGIN_NAME"
-          replace: ${{ env.PLUGIN_NAME }}
-          regex: false
-          exclude: .git*/**
-
       - name: Find and replace formatted plugin name
         uses: jacobtomlinson/gha-find-replace@v3
         with:
           find: "PLUGIN_NAME_FORMATTED"
           replace: ${{ env.PLUGIN_NAME_FORMATTED }}
+          regex: false
+          exclude: .git*/**
+
+      - name: Find and replace plugin name
+        uses: jacobtomlinson/gha-find-replace@v3
+        with:
+          find: "PLUGIN_NAME"
+          replace: ${{ env.PLUGIN_NAME }}
           regex: false
           exclude: .git*/**
 
