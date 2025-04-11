@@ -1,6 +1,6 @@
 [build-system]
-requires = ["setuptools>=61.0"]
-build-backend = "setuptools.build_meta"
+requires = ["hatchling >= 1.26"]
+build-backend = "hatchling.build"
 
 [project.urls]
 Homepage = "PLUGIN_HOMEPAGE"
@@ -15,4 +15,4 @@ classifiers = [
     "Operating System :: OS Independent",
 ]
 license = { text = "Apache-2.0" }
-dependencies = ["quark-framework>=0.1.4"]
+dependencies = ["quark-framework>=0.1.6"]

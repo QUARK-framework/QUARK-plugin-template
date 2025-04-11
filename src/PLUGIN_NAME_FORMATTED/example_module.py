@@ -1,7 +1,7 @@
 from dataclasses import dataclass
 from typing import override
 
-from quark.protocols import Core
+from quark.core import Core
 
 @dataclass
 class ExampleModule(Core):
