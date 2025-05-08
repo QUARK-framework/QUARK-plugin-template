@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from typing import override
+from typing import override, Any
 
 from quark.core import Core
 
@@ -14,9 +14,9 @@ class ExampleModule(Core):
     """
 
     @override
-    def preprocess(self, data: None) -> None:
+    def preprocess(self, data: Any) -> Any:
         pass
 
     @override
-    def postprocess(self, data: None) -> None:
+    def postprocess(self, data: Any) -> Any:
         pass
