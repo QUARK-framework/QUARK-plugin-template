@@ -1,7 +1,9 @@
 from dataclasses import dataclass
-from typing import override, Any
+from typing import override
 
-from quark.core import Core
+from quark.core import Core, Result
+from quark.interface_types import InterfaceType
+
 
 @dataclass
 class ExampleModule(Core):
@@ -14,9 +16,9 @@ class ExampleModule(Core):
     """
 
     @override
-    def preprocess(self, data: Any) -> Any:
-        pass
+    def preprocess(self, data: InterfaceType) -> Result:
+        raise NotImplementedError
 
     @override
-    def postprocess(self, data: Any) -> Any:
-        pass
+    def postprocess(self, data: InterfaceType) -> Result:
+        raise NotImplementedError

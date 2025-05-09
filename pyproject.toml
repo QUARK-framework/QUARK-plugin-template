@@ -15,4 +15,4 @@ classifiers = [
     "Operating System :: OS Independent",
 ]
 license = { text = "Apache-2.0" }
-dependencies = ["quark-framework>=0.1.7"]
+dependencies = ["quark-framework>=0.1.9"]
