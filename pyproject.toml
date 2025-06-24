@@ -17,5 +17,5 @@ classifiers = [
     "Programming Language :: Python :: 3",
     "Operating System :: OS Independent",
 ]
-license = { text = "Apache-2.0" }
+license = "Apache-2.0"
 dependencies = ["quark-framework>=0.1.9"]
